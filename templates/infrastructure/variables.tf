@@ -53,7 +53,7 @@ variable "ibmcloud_api_key" {
   description = "The IBM Cloud API Key used to provision the schematics agent infrastructure resources. If not provided, then resources will be provisioned in currently logged in user account."
   type        = string
   sensitive   = true
-   default     = ""
+  default     = ""
 }
 
 ##############################################################################
