@@ -39,7 +39,7 @@ resource "kubernetes_config_map" "logdna_agent" {
   }
 
   data = {
-    logdna-agent-key = data.ibm_resource_key.logdna_key.credentials["ingestion_key"]
+    logdna-agent-key = ibm_resource_key.logdna_key.credentials["ingestion_key"]
     logdna-host      = "logs.private.${var.location}.logging.cloud.ibm.com"
   }
 
