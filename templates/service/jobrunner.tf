@@ -39,6 +39,7 @@ resource "kubernetes_config_map" "jobrunner_configmap" {
     JR_LOGGERLEVEL        = "-1"
     JR_ATLOGGERLEVEL      = "-1"
     JR_EXTLOGGERLEVEL     = "-1"
+    JR_FEATUREFLAGS       = "AgentRegistration:False"
   }
 
   depends_on = [kubernetes_namespace.namespace]
