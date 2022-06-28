@@ -1,7 +1,12 @@
-##############################################################################
-# Agent Runtime Services Variables
-# Copyright 2022 IBM
-##############################################################################
+###############################################################################
+# IBM Confidential
+# OCO Source Materials
+# IBM Cloud Schematics
+# (C) Copyright IBM Corp. 2022 All Rights Reserved.
+# The source code for this program is not  published or otherwise divested of
+# its trade secrets, irrespective of what has been deposited with
+# the U.S. Copyright Office.
+###############################################################################
 
 variable "agent_name" {
   description = "Name of the agent."
@@ -47,7 +52,7 @@ variable "schematics_endpoint_location" {
   default     = "us-south"
 
   validation {
-    condition     = contains(["us","eu","us-south","us-east","eu-de","eu-gb"], var.schematics_endpoint_location)
+    condition     = contains(["us", "eu", "us-south", "us-east", "eu-de", "eu-gb"], var.schematics_endpoint_location)
     error_message = "Invalid input, options: \"us\", \"eu\", \"us-south\", \"us-east\", \"eu-de\", \"eu-gb\"."
   }
 }
@@ -79,11 +84,5 @@ variable "ibmcloud_api_key" {
   sensitive   = true
   default     = ""
 }
-
-# variable "logdna_key_name" {
-#   description = "Name of logdna instance key"
-#   type        = string
-#   default     = "gcat-multizone-logdna-key"
-# }
 
 ##############################################################################

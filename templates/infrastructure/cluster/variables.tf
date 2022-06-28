@@ -1,3 +1,13 @@
+###############################################################################
+# IBM Confidential
+# OCO Source Materials
+# IBM Cloud Schematics
+# (C) Copyright IBM Corp. 2022 All Rights Reserved.
+# The source code for this program is not  published or otherwise divested of
+# its trade secrets, irrespective of what has been deposited with
+# the U.S. Copyright Office.
+###############################################################################
+
 ##############################################################################
 # Account variables
 ##############################################################################
@@ -149,31 +159,6 @@ variable "worker_pools" {
     ]) == 0
   }
 
-}
-
-##############################################################################
-
-
-##############################################################################
-# Resource Variables
-##############################################################################
-
-variable "cos_id" {
-  description = "ID of COS instance"
-  type        = string
-  default     = null
-}
-
-variable "kms_guid" {
-  description = "GUID of Key Protect Instance"
-  type        = string
-  default     = null
-}
-
-variable "key_id" {
-  description = "GUID of User Managed Key"
-  type        = string
-  default     = null
 }
 
 ##############################################################################

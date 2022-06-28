@@ -1,0 +1,53 @@
+{
+    "name": "schematics-remote-service-workspace",
+    "type": [
+        "terraform_v0.13"
+    ],
+    "description": "schematics agents runtime services workspace",
+    "template_repo": {
+        "url": ""
+    },
+    "template_data": [
+        {
+            "folder": ".",
+            "type": "terraform_v0.13",
+            "variablestore": [
+                {
+                    "name": "cluster_id",
+                    "type": "string",
+                    "value": "<target_iks_cluster_ID"
+                },
+                {
+                    "name": "resource_group_name",
+                    "type": "string",
+                    "value": "<target_resource_group_ID>"
+                },
+                {
+                    "name": "logdna_name",
+                    "type": "string",
+                    "value": "<target_logdna_name>"
+                },
+                {
+                    "name": "schematics_endpoint_location",
+                    "type": "string",
+                    "value": "us"
+                },
+                {
+                    "name": "profile_id",
+                    "type": "string",
+                    "value": "<IAM_Trusted_Profile_Id>"
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "us-south"
+                },
+                {
+                    "name": "agent_name",
+                    "type": "string",
+                    "value": "my-project"
+                }
+            ]
+        }
+    ]
+}
