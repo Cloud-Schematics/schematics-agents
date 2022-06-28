@@ -27,7 +27,7 @@ variable "location" {
 }
 
 variable "resource_group_name" {
-  description = "Name of resource group used for agent infrastructure and agent service."
+  description = "Name of resource group used where agent infrastructure was provisioned"
   type        = string
 
   # validation {
