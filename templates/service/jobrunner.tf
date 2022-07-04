@@ -20,7 +20,7 @@ resource "kubernetes_config_map" "jobrunner_configmap" {
   }
 
   data = {
-    JR_PROFILEID          = var.profile_id
+    JR_PROFILE_ID          = var.profile_id
     JR_AGENTNAME          = var.agent_name
     JR_AGENT_LOCATION     = var.location
     JR_SCHEMATICSENDPOINT = local.schematics_endpoint
